@@ -1,0 +1,18 @@
+[build]
+  command = "hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.147.8"  # Always pin to a specific version
+  HUGO_ENV = "production"
+  NODE_ENV = "production"
+
+[context.production.environment]
+  HUGO_ENABLEGITINFO = "true"
+
+# Enable pretty URLs (remove .html)
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 200
+  force = false
