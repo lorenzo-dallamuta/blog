@@ -8,11 +8,14 @@
       "circle",
       "code",
       "div",
+      "em",
       "footer",
       "h1",
       "h2",
+      "h3",
       "head",
       "header",
+      "hr",
       "html",
       "li",
       "line",
@@ -64,6 +67,8 @@
     ],
     "ids": [
       "first-impressions-of-newsapi",
+      "key-features",
+      "key-takeaways-from-the-api",
       "menu",
       "moon",
       "sun",
@@ -71,6 +76,7 @@
       "theme-toggle",
       "top",
       "top-link",
+      "whats-next",
       "why-a-news-aggregator"
     ]
   }

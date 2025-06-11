@@ -6,20 +6,20 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building a News Aggregator with Next.js and NewsAPI – Part 1: Exploring the API</title>
+      <title></title>
       <link>http://localhost:1313/posts/nextjs-news-aggregator/</link>
-      <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/nextjs-news-aggregator/</guid>
-      <description>&lt;h2 id=&#34;why-a-news-aggregator&#34;&gt;Why a News Aggregator?&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;ve been wanting to experiment with &lt;strong&gt;hybrid rendering in Next.js&lt;/strong&gt;—mixing server-side rendering (SSR) for SEO-critical pages and client-side rendering (CSR) for dynamic filters. A news aggregator felt like the perfect use case:&lt;/p&gt;
+      <description>&lt;h1 id=&#34;why-a-news-aggregator&#34;&gt;Why a News Aggregator?&lt;/h1&gt;
+&lt;p&gt;I’ve been wanting to experiment with hybrid rendering in Next.js—mixing server-side rendering (SSR) for SEO-critical pages and client-side rendering (CSR) for dynamic filters. A news aggregator felt like the perfect use case:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;SSR&lt;/strong&gt; for fast-loading, crawlable homepage headlines.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;CSR&lt;/strong&gt; for real-time search/filtering as users tweak their queries.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Instead of building a custom backend, I&amp;rsquo;m using the &lt;a href=&#34;https://newsapi.org/&#34;&gt;NewsAPI&lt;/a&gt;—a free API with global news data—to focus on the frontend architecture. But first, let&amp;rsquo;s see what the API actually offers!&lt;/p&gt;</description>
+&lt;p&gt;Instead of building a custom backend, I’m using the NewsAPI—a free API with global news data—to focus on the frontend architecture. But first, let’s see what the API actually offers!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
