@@ -1,0 +1,12 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "PaperMod"
+
+[build]
+  publishResources = true
+  noChmod = true
+  writeStats = true
+
+[params]
+  showDrafts = false  # Globally hides drafts
