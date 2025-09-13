@@ -67,17 +67,20 @@
     ],
     "ids": [
       "first-impressions-of-newsapi",
-      "key-features",
+      "how-to-test-an-asyncstorage-insert-in-react-native",
       "key-takeaways-from-the-api",
       "menu",
       "moon",
+      "step-1-set-up-the-mock",
+      "step-2-write-the-test",
       "sun",
       "testing-the-api-with-curl",
       "theme-toggle",
       "top",
       "top-link",
       "whats-next",
-      "why-a-news-aggregator"
+      "why-a-news-aggregator",
+      "why-doing-it-this-way"
     ]
   }
 }
