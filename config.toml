@@ -1,6 +1,6 @@
 baseURL = "http://localhost:1313/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "It's always a feature"
 theme = "PaperMod"
 
 [build]
@@ -9,4 +9,4 @@ theme = "PaperMod"
   writeStats = true
 
 [params]
-  showDrafts = false  # Globally hides drafts
+  showDrafts = true  # Globally hides drafts
