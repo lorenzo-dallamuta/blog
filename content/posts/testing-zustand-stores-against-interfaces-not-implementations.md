@@ -1,6 +1,6 @@
 # Testing Zustand Stores Against Interfaces, Not Implementations
 
-In my previous [previous article]({{< ref "testing-asyncstorage-react-native.md" >}}), I showed how to test a concrete IDataStore implementation that uses `@react-native-async-storage/async-storage`. But what about the code that consumes this interface? Today I want to share how I test my Zustand store to ensure it works correctly with any storage implementation—whether it's AsyncStorage, SQLite, or a future web API.
+In my previous [previous article]({{< ref "react-native-async-storage-test-insert.md" >}}), I showed how to test a concrete IDataStore implementation that uses `@react-native-async-storage/async-storage`. But what about the code that consumes this interface? Today I want to share how I test my Zustand store to ensure it works correctly with any storage implementation—whether it's AsyncStorage, SQLite, or a future web API.
 
 The beauty of this approach is that once you have a well-tested interface like IDataStore, testing the consumers becomes remarkably straightforward. You're no longer testing against a specific storage implementation, but against a contract.
 
