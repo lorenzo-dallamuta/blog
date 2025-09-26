@@ -1,42 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Posts on It&#39;s always a feature</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on It&#39;s always a feature</description>
-    <generator>Hugo -- 0.147.8</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/nextjs-news-aggregator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/nextjs-news-aggregator/</guid>
-      <description>&lt;h1 id=&#34;why-a-news-aggregator&#34;&gt;Why a News Aggregator?&lt;/h1&gt;
-&lt;p&gt;I’ve been wanting to experiment with hybrid rendering in Next.js—mixing server-side rendering (SSR) for SEO-critical pages and client-side rendering (CSR) for dynamic filters. A news aggregator felt like the perfect use case:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;SSR&lt;/strong&gt; for fast-loading, crawlable homepage headlines.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CSR&lt;/strong&gt; for real-time search/filtering as users tweak their queries.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Instead of building a custom backend, I’m using the NewsAPI—a free API with global news data—to focus on the frontend architecture. But first, let’s see what the API actually offers!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/react-native-async-storage-test-insert/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/react-native-async-storage-test-insert/</guid>
-      <description>&lt;h1 id=&#34;how-to-test-an-asyncstorage-insert-in-react-native&#34;&gt;How To Test an AsyncStorage Insert in React Native&lt;/h1&gt;
-&lt;p&gt;In a React Native app async storage any developer would eventually encounter this issue: testing a function that saves data to &lt;code&gt;@react-native-async-storage/async-storage&lt;/code&gt;. The library itself doesn&amp;rsquo;t need to be tested; you want to test that your code calls the library correctly with the right data.&lt;/p&gt;
-&lt;p&gt;A typical pattern is to have a service or a wrapper that encapsulates your storage logic. Let&amp;rsquo;s say you have a method like this that takes an object does things with it and finally saves it to storage:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/testing-zustand-stores-against-interfaces-not-implementations/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/testing-zustand-stores-against-interfaces-not-implementations/</guid>
-      <description>&lt;h1 id=&#34;testing-zustand-stores-against-interfaces-not-implementations&#34;&gt;Testing Zustand Stores Against Interfaces, Not Implementations&lt;/h1&gt;
-&lt;p&gt;In my previous &lt;a href=&#34;http://localhost:1313/posts/react-native-async-storage-test-insert/&#34;&gt;previous article&lt;/a&gt;, I showed how to test a concrete IDataStore implementation that uses &lt;code&gt;@react-native-async-storage/async-storage&lt;/code&gt;. But what about the code that consumes this interface? Today I want to share how I test my Zustand store to ensure it works correctly with any storage implementation—whether it&amp;rsquo;s AsyncStorage, SQLite, or a future web API.&lt;/p&gt;
-&lt;p&gt;The beauty of this approach is that once you have a well-tested interface like IDataStore, testing the consumers becomes remarkably straightforward. You&amp;rsquo;re no longer testing against a specific storage implementation, but against a contract.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on It's always a feature</title><link>https://flourishing-pithivier-5048ba.netlify.app/posts/</link><description>Recent content in Posts on It's always a feature</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><atom:link href="https://flourishing-pithivier-5048ba.netlify.app/posts/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://flourishing-pithivier-5048ba.netlify.app/posts/jest-mocking-overriding-react-native-internal-component-props-without-changing-your-code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://flourishing-pithivier-5048ba.netlify.app/posts/jest-mocking-overriding-react-native-internal-component-props-without-changing-your-code/</guid><description>&lt;h2 id="jest-mocking-overriding-internal-component-props-without-changing-your-code">Jest Mocking: Overriding Internal Component Props Without Changing Your Code&lt;/h2>
+&lt;p>Need to modify a React Native component&amp;rsquo;s internal behavior for testing? Instead of exposing test-specific props through your component API, mock the dependency directly.&lt;/p>
+&lt;p>Sometimes tests need to control internal behavior of third-party components without modifying your production code. This pattern lets you override any prop or implementation detail while keeping the original component as a base.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">jest&lt;/span>.&lt;span style="color:#a6e22e">mock&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;react-native&amp;#39;&lt;/span>, () =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">ActualRN&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">jest&lt;/span>.&lt;span style="color:#a6e22e">requireActual&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;react-native&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Use defineProperty to properly override getter-based exports
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> Object.&lt;span style="color:#a6e22e">defineProperty&lt;/span>(&lt;span style="color:#a6e22e">ActualRN&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;FlatList&amp;#39;&lt;/span>, {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">value&lt;/span>&lt;span style="color:#f92672">:&lt;/span> (&lt;span style="color:#a6e22e">props&lt;/span>) =&amp;gt; &lt;span style="color:#f92672">&amp;lt;&lt;/span>&lt;span style="color:#a6e22e">ActualRN&lt;/span>.&lt;span style="color:#a6e22e">FlatList&lt;/span> {...&lt;span style="color:#a6e22e">props&lt;/span>} &lt;span style="color:#a6e22e">initialNumToRender&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">props&lt;/span>.&lt;span style="color:#a6e22e">data&lt;/span>&lt;span style="color:#f92672">?&lt;/span>.&lt;span style="color:#a6e22e">length&lt;/span>} &lt;span style="color:#f92672">/&amp;gt;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">writable&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, &lt;span style="color:#75715e">// Allows Jest to overwrite this mock if needed
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">configurable&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span> &lt;span style="color:#75715e">// Essential: lets Jest reset mocks between tests
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> });
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#a6e22e">ActualRN&lt;/span>; &lt;span style="color:#75715e">// Preserves all other React Native components
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The key is Object.defineProperty, which safely overrides components exported as getters (like FlatList) while preserving React Native&amp;rsquo;s module structure. Unlike direct assignment that fails silently on getter properties, this method properly replaces the component definition.&lt;/p></description></item><item><title/><link>https://flourishing-pithivier-5048ba.netlify.app/posts/nextjs-news-aggregator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://flourishing-pithivier-5048ba.netlify.app/posts/nextjs-news-aggregator/</guid><description>&lt;h1 id="why-a-news-aggregator">Why a News Aggregator?&lt;/h1>
+&lt;p>I’ve been wanting to experiment with hybrid rendering in Next.js—mixing server-side rendering (SSR) for SEO-critical pages and client-side rendering (CSR) for dynamic filters. A news aggregator felt like the perfect use case:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>SSR&lt;/strong> for fast-loading, crawlable homepage headlines.&lt;/li>
+&lt;li>&lt;strong>CSR&lt;/strong> for real-time search/filtering as users tweak their queries.&lt;/li>
+&lt;/ul>
+&lt;p>Instead of building a custom backend, I’m using the NewsAPI—a free API with global news data—to focus on the frontend architecture. But first, let’s see what the API actually offers!&lt;/p></description></item><item><title/><link>https://flourishing-pithivier-5048ba.netlify.app/posts/react-native-async-storage-test-insert/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://flourishing-pithivier-5048ba.netlify.app/posts/react-native-async-storage-test-insert/</guid><description>&lt;h1 id="how-to-test-an-asyncstorage-insert-in-react-native">How To Test an AsyncStorage Insert in React Native&lt;/h1>
+&lt;p>In a React Native app async storage any developer would eventually encounter this issue: testing a function that saves data to &lt;code>@react-native-async-storage/async-storage&lt;/code>. The library itself doesn&amp;rsquo;t need to be tested; you want to test that your code calls the library correctly with the right data.&lt;/p>
+&lt;p>A typical pattern is to have a service or a wrapper that encapsulates your storage logic. Let&amp;rsquo;s say you have a method like this that takes an object does things with it and finally saves it to storage:&lt;/p></description></item><item><title/><link>https://flourishing-pithivier-5048ba.netlify.app/posts/testing-zustand-stores-against-interfaces-not-implementations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://flourishing-pithivier-5048ba.netlify.app/posts/testing-zustand-stores-against-interfaces-not-implementations/</guid><description>&lt;h1 id="testing-zustand-stores-against-interfaces-not-implementations">Testing Zustand Stores Against Interfaces, Not Implementations&lt;/h1>
+&lt;p>In my previous &lt;a href="https://flourishing-pithivier-5048ba.netlify.app/posts/react-native-async-storage-test-insert/">previous article&lt;/a>, I showed how to test a concrete IDataStore implementation that uses &lt;code>@react-native-async-storage/async-storage&lt;/code>. But what about the code that consumes this interface? Today I want to share how I test my Zustand store to ensure it works correctly with any storage implementation—whether it&amp;rsquo;s AsyncStorage, SQLite, or a future web API.&lt;/p>
+&lt;p>The beauty of this approach is that once you have a well-tested interface like IDataStore, testing the consumers becomes remarkably straightforward. You&amp;rsquo;re no longer testing against a specific storage implementation, but against a contract.&lt;/p></description></item></channel></rss>
